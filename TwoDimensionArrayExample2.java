@@ -1,5 +1,6 @@
 public class TwoDimensionArrayExample2 {
-    private int[][] array;
+    
+public int[][] array;
 
     // Constructor to initialize the 2D array with given rows and columns
     public TwoDimensionArrayExample2(int rows, int cols) {
@@ -42,3 +43,4 @@ public class TwoDimensionArrayExample2 {
         example.printArray();
     }
 }
+
