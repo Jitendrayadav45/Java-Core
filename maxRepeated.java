@@ -39,3 +39,6 @@ public class maxRepeated {
         return maxValue; // Return the value with the maximum count
     }
 }
+
+
+///// JItendra Yadav
