@@ -2,46 +2,204 @@
 ================
 ### Java Core
 #### Java Basics
-*   Variables
-*   Data Types
-*   Operators
-*   Control Structures
-*   Functions
-*   Arrays
-*   Object-Oriented Programming (OOP) Concepts
-*   Exception Handling
-*   Multithreading
-*   File Input/Output
-*   Networking
-*   Regular Expressions
-*   Java Collections Framework
-*   Java 8 Features (Lambda Expressions, Method References, Functional Interfaces, etc.)
-*   Java 9 Features (Modular System, JShell, etc.)
-*   Java 10 Features (Local Variable Type Inference, etc.)
-*   Java 11 Features (HTTP Client, etc.)
-*   Java 12 Features (Switch Expressions, etc.)
-*   Java 13 Features (Text Blocks, etc.)
-*   Java 14 Features (Pattern Matching for Switch, etc.)
-*   Java 15 Features (Sealed Classes, etc.)
-*   Java 16 Features (Vector API, etc.)
-*   Java 17 Features (Sealed Classes, etc.)
-*   Java 18 Features (UTF-8 by Default, etc.)
-*   Java 19 Features (Structured Concurrency, etc.)
-*   Java 20 Features (Pattern Matching for instanceof, etc.)
-*   Java 21 Features (Structured Concurrency, etc.)
-*   Java 22 Features (Pattern Matching for instanceof, etc.)
-*   Java 23 Features (Structured Concurrency, etc.)
-*   Java 24 Features (Pattern Matching for instanceof, etc.)
-*   Java 25 Features (Structured Concurrency, etc.)
-*   Java 26 Features (Pattern Matching for instanceof, etc.)
-*   Java 27 Features (Structured Concurrency, etc.)
-*   Java 28 Features (Pattern Matching for instanceof, etc.)
-*   Java 29 Features (Structured Concurrency, etc.)
-*   Java 30 Features (Pattern Matching for instanceof, etc.)
-*   Java 31 Features (Structured Concurrency, etc.)
-*   Java 32 Features (Pattern Matching for instanceof, etc.)
-*   Java 33 Features (Structured Concurrency, etc.)
-*   Java 34 Features (Pattern Matching for instanceof, etc.)
-*   Java 35 Features (Structured Concurrency, etc.)
-*   Java 36 Features (Pattern Matching for instanceof, etc.)
-*   Java 37 Features (Structured Concurrency, etc.)
+
+1. Number Pyramid
+Problem: Print the following number pyramid for n = 5:
+
+markdown
+Copy code
+    1
+   1 2
+  1 2 3
+ 1 2 3 4
+1 2 3 4 5
+Code:
+java
+Copy code
+public class NumberPyramid {
+    public static void main(String[] args) {
+        int n = 5; // Number of rows
+
+        for (int i = 1; i <= n; i++) {
+            // Print spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            // Print numbers
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            // Move to next line
+            System.out.println();
+        }
+    }
+}
+2. Diamond Pattern
+Problem: Print the following diamond pattern for n = 5:
+
+markdown
+Copy code
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+Code:
+java
+Copy code
+public class DiamondPattern {
+    public static void main(String[] args) {
+        int n = 5; // Number of rows for the top half
+
+        // Top half of the diamond
+        for (int i = 1; i <= n; i++) {
+            // Print spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            // Print stars
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        // Bottom half of the diamond
+        for (int i = n - 1; i >= 1; i--) {
+            // Print spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            // Print stars
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+3. Checkerboard Pattern
+Problem: Print the following checkerboard pattern for n = 5:
+
+markdown
+Copy code
+* * * * *
+ * * * * *
+* * * * *
+ * * * * *
+* * * * *
+Code:
+java
+Copy code
+public class CheckerboardPattern {
+    public static void main(String[] args) {
+        int n = 5; // Number of rows
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                // Print star based on row and column parity
+                if ((i + j) % 2 == 0) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+4. Floyd’s Triangle
+Problem: Print Floyd’s triangle for n = 5:
+
+Copy code
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+Code:
+java
+Copy code
+public class FloydsTriangle {
+    public static void main(String[] args) {
+        int n = 5; // Number of rows
+        int num = 1; // Starting number
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(num + " ");
+                num++; // Increment the number
+            }
+            System.out.println();
+        }
+    }
+}
+5. Zigzag Star Pattern
+Problem: Print the following zigzag pattern for n = 9:
+
+markdown
+Copy code
+   *       *
+  * *     * *
+ *   *   *   *
+*     * *     *
+Code:
+java
+Copy code
+public class ZigzagPattern {
+    public static void main(String[] args) {
+        int n = 9; // Number of columns
+
+        for (int i = 1; i <= 4; i++) { // 4 rows
+            for (int j = 1; j <= n; j++) {
+                // Check if star should be printed
+                if ((i + j) % 4 == 0 || (i == 2 && j % 4 == 0)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+6. Hollow Pyramid
+Problem: Print a hollow pyramid for n = 5:
+
+markdown
+Copy code
+    *
+   * *
+  *   *
+ *     *
+*********
+Code:
+java
+Copy code
+public class HollowPyramid {
+    public static void main(String[] args) {
+        int n = 5; // Number of rows
+
+        for (int i = 1; i <= n; i++) {
+            // Print spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            // Print stars and spaces
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                if (j == 1 || j == (2 * i - 1) || i == n) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+*   
