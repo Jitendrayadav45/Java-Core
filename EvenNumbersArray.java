@@ -2,6 +2,14 @@ import java.util.ArrayList;
 
 public class EvenNumbersArray {
     public static void main(String[] args) {
+
+        // Input:
+        //        int[] originalArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        // Output:
+        //     int[] evenArray = {2, 4, 6, 8, 10};
+
+
         int[] originalArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int[] evenArray = getEvenNumbers(originalArray);
 
