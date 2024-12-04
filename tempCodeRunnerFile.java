@@ -1,1 +1,1 @@
- //index last = first 
+findMaxConsecutiveOnes
